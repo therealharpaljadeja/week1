@@ -36,6 +36,8 @@ fs.writeFileSync(
 	Multiplier3Groth16Bumped
 );
 
+// Plonk verifier needs different regex.
+const plonkVerifierRegex = /contract PlonkVerifier/;
 let Multiplier3Plonk = fs.readFileSync(
 	"./contracts/Multiplier3PlonkVerifier.sol",
 	{ encoding: "utf-8" }
@@ -45,7 +47,7 @@ let Multiplier3PlonkBumped = Multiplier3Plonk.replace(
 	"pragma solidity ^0.8.0"
 );
 Multiplier3PlonkBumped = Multiplier3PlonkBumped.replace(
-	verifierRegex,
+	plonkVerifierRegex,
 	"contract Multiplier3PlonkVerifier"
 );
 
