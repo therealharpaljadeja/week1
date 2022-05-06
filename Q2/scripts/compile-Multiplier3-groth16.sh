@@ -16,7 +16,7 @@ echo "Compiling Multiplier3.circom..."
 
 # compile circuit
 
-circom Multiplier3.circom --r1cs --wasm --sym -o Multiplier3
+circom Multiplier3.circom --r1cs --wasm --sym -o Multiplier3_Groth16
 snarkjs r1cs info Multiplier3_Groth16/Multiplier3.r1cs
 
 # Start a new zkey and make a contribution
