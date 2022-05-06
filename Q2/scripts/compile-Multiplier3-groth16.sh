@@ -23,7 +23,7 @@ snarkjs r1cs info Multiplier3_Groth16/Multiplier3.r1cs
 
 snarkjs groth16 setup Multiplier3_Groth16/Multiplier3.r1cs powersOfTau28_hez_final_10.ptau Multiplier3_Groth16/circuit_0000.zkey
 snarkjs zkey contribute Multiplier3_Groth16/circuit_0000.zkey Multiplier3_Groth16/circuit_final.zkey --name="1st Contributor Name" -v -e="random text"
-snarkjs zkey export verificationkey HelloWorld/circuit_final.zkey HelloWorld/verification_key.json
+snarkjs zkey export verificationkey Multiplier3_Groth16/circuit_final.zkey Multiplier3_Groth16/verification_key.json
 
 # generate solidity contract
 snarkjs zkey export solidityverifier Multiplier3_Groth16/circuit_final.zkey ../Multiplier3Groth16Verifier.sol
