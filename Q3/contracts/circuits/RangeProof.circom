@@ -21,6 +21,6 @@ template RangeProof(n) {
     high.in[1] <== in;
 
     // if both true then 'in' is in the range [lower, upper].
-    out <-- low.out & high.out;
+    out <== low.out * high.out;
 }
 
